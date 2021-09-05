@@ -24,14 +24,14 @@
     Linked List is a dynamic linear data structure which stores similar type of data items stored at random memory location and linked
     with each other through pointers. Due to its dynamic in nature the size is not fixed
     
-        Advantages:
-        i) It has dynamic size.
-        ii) We can easily insert and delete elements in it.
+    Advantages:
+    i) It has dynamic size.
+    ii) We can easily insert and delete elements in it.
 
-        Disadvantages:
-        i) Random access of element is not allowed.
-        ii) Extra memory required for pointer.
+    Disadvantages:
+    i) Random access of element is not allowed.
+    ii) Extra memory required for pointer.
 
-        Real Life Examples-
-        i) Image viewer uses linked list to link images with two buttons previous and next, with which we can move forward or backward.
+    Real Life Examples-
+    i) Image viewer uses linked list to link images with two buttons previous and next, with which we can move forward or backward.
 <section>
