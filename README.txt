@@ -1,8 +1,7 @@
-<h1>Data Structure & Algorithm</h1>
+#Data Structure & Algorithm
 
 
-<section>
-<h3>Array</h3>
+###Array
     Array is a static linear data structure which stores similar type of data item stored at contiguous memory location. 
     
     Advantages:
@@ -17,12 +16,12 @@
     
     Real Life Examples- 
     i) The contact list in our phone represents the feature of array because when we add a new contact all the contacts shifts and the same thing happens when we delete a contact. 
-<section>
+
 
 <section>
 <h3>Linked List<h3>
-    Linked List is a dynamic linear data structure which stores similar type of data items stored at random memory location and linked
-    with each other through pointers. Due to its dynamic in nature the size is not fixed
+    Linked List is a dynamic linear data structure which stores similar type of data items stored at random memory location and linked with each other through pointers. 
+    Due to its dynamic in nature the size is not fixed.
     
     Advantages:
     i) It has dynamic size.
