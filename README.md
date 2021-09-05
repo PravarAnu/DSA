@@ -4,7 +4,6 @@
 <section>
     <h3>Array</h3>
         Array is a static linear data structure which stores similar type of data item stored at contiguous memory location. 
-        It is used to implement other data structures like stacks, queues, Heaps, Hash table.
         
         Advantages:
         i) It allows random access to elements.
@@ -22,10 +21,17 @@
 
 <section>
     <h3>Linked List<h3>
-    <pre>
         Linked List is a dynamic linear data structure which stores similar type of data items stored at random memory location and linked
         with each other through pointers. Due to its dynamic in nature the size is not fixed
 
-        Example - 
-    </pre>
+        Advantages:
+        i) It has dynamic size.
+        ii) We can easily insert and delete elements in it.
+
+        Disadvantages:
+        i) Random access of element is not allowed.
+        ii) Extra memory required for pointer.
+
+        Real Life Examples-
+        i) Image viewer uses linked list to link images with two buttons previous and next, with which we can move forward or backward.
 </section>
