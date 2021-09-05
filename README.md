@@ -3,12 +3,9 @@
 
 <section>
     <h3>Array</h3>
-    <p>What is an Array ?</p>
-    <p>
-        Array is a static linear data structure which stores similar type of data item stored at contiguous memory location.
-    </p>
     <pre>
-        
+        What is an Array ?
+        Array is a static linear data structure which stores similar type of data item stored at contiguous memory location.
     </pre>
 </section>
 
