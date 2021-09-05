@@ -3,5 +3,8 @@
 
 <section>
     <h3>Array</h3>
-    <p>What is Array ?</p>
+    <p>
+        <div>What is Array ?</div>
+        Ans- Array is a linear data structure which stores similar type of data item stored at contiguous memory location.
+    </p>
 </section>
