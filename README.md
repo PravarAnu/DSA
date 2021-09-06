@@ -32,7 +32,7 @@
 
 
 ## Stack
-*Stack is a static linear data structure which follows a perticular order in which operations are performed. The order may be LIFO(Last In First Out) or FILO(First In Last Out). It can be implemented by both Array or Linked List. Mainly there are three operations performed in the stack*
+*Stack is a linear data structure which follows a perticular order in which operations are performed. The order may be LIFO(Last In First Out) or FILO(First In Last Out). It can be implemented by both Array or Linked List. Mainly there are three operations performed in the stack.*
 - Push(For adding item into the stack.)
 - Pop(For removing the item from the stack.)
 - Peek or Top(Shows what is the top most item.)
@@ -44,8 +44,24 @@
 - In the implementation through linked list the stack can grow or shrink at the runtime.
 
 ### Disadvantages:
+- It is not dynamic.
 - In implementation through array, we can't increase or decrease the size of stack at the runtime.
 - In implementation through linked list, there is a need of extra memory due to pointers.
 
 ### Real Life Examples:
 - In canteen the plates are stacked over one another. The plate which is at top is firstly removed and the last plate which was placed very firstly can remain in the stack for the longest time.
+
+
+## Queue
+*Queue is a linear data structure which follows a particular order in which operations are performed. The order is FIFO(First In First Out).Mainly there are four operations performed on the queue.*
+- Enqueue(For adding item into the queue.)
+- Dequeue(For removing item from the queue.)
+- Front(Show the front item of the queue.)
+- Rear(Show the last item of the queue.)
+
+## Advantages:
+- It is easy to implement.
+- Implemented using linked list.
+
+## Disadvantages:
+- It is static, not dynamic.
