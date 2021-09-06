@@ -17,8 +17,7 @@
 
 
 ## Linked List
-*Linked List is a dynamic linear data structure which stores similar type of data items stored at random memory location and linked with each other through pointers. 
-Due to its dynamic in nature the size is not fixed.*
+*Linked List is a dynamic linear data structure which stores similar type of data items stored at random memory location and each data is stored in a shell which is known as node which has a value bucket and a pointer bucket, value bucket stores value and the pointer bucket stores the address of the next node. That's why they are called linked list*
     
 ### Advantages:
 - It has dynamic size.
@@ -30,3 +29,10 @@ Due to its dynamic in nature the size is not fixed.*
 
 ### Real Life Examples-
 - Image viewer uses linked list to link images with two buttons previous and next, with which we can move forward or backward.
+
+
+## Stack
+*Stack is a static linear data structure which follows a perticular order in which operations are performed. The order may be LIFO(Last In First Out) or FILO(First In Last Out). It can be implemented by both Array or Linked List. Mainly there are three operations performed in the stack*
+- Push(For adding item into the stack.)
+- Pop(For removing the item from the stack.)
+- Peek or Top(Shows what is the top most item.)
