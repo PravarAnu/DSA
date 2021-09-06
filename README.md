@@ -68,3 +68,24 @@
 
 ### Real Life Examples:
 - The queue of people at ticket counter follows the same principal, the first person is served first.
+
+
+## Graph
+*Graph is an non-linear data structure consistings of finite set of nodes(vertices) and edges. The edges are the arcs or line which join two nodes or vertices together*
+
+### Advantages:
+
+### Disadvantages:
+
+### Real Life Examples:
+- The network of path in a city which connect one city from another.
+
+
+## Tree
+*Tree is an non-linear data structure which is also a multilevel data structure with a hierarchical relationship among its nodes. The bottom most node in the hierarchy is known as leaf node and the topmost is known as root node.                                                     It is based on parent-child relationship among the nodes. Each node in the tree can have more than one children except the leaf node.*
+
+### Advantages:
+
+### Disadvanteges:
+
+### Real Life Examples:
