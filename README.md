@@ -59,9 +59,9 @@
 - Front(Show the front item of the queue.)
 - Rear(Show the last item of the queue.)
 
-## Advantages:
+### Advantages:
 - It is easy to implement.
 - Implemented using linked list.
 
-## Disadvantages:
+### Disadvantages:
 - It is static, not dynamic.
