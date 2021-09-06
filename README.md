@@ -36,3 +36,16 @@
 - Push(For adding item into the stack.)
 - Pop(For removing the item from the stack.)
 - Peek or Top(Shows what is the top most item.)
+
+### Advantages:
+- It is easy to implement.
+- It can be implemented by array or linked list.
+- In the implementation through array there is no need of pointer which saves space. 
+- In the implementation through linked list the stack can grow or shrink at the runtime.
+
+### Disadvantages:
+- In implementation through array, we can't increase or decrease the size of stack at the runtime.
+- In implementation through linked list, there is a need of extra memory due to pointers.
+
+### Real Life Examples:
+- In canteen the plates are stacked over one another. The plate which is at top is firstly removed and the last plate which was placed very firstly can remain in the stack for the longest time.
