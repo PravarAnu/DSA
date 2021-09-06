@@ -65,3 +65,6 @@
 
 ### Disadvantages:
 - It is static, not dynamic.
+
+### Real Life Examples:
+- The queue of people at ticket counter follows the same principal, the first person is served first.
