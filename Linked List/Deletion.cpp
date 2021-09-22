@@ -10,6 +10,8 @@ public:
 Node* head;
 
 void Print();
+void Delete(int n);
+
 
 int main(){
     head = NULL;
@@ -20,18 +22,20 @@ int main(){
 
     head = first;
 
-    first->data = 10;
+    first->data = 30;
     first->next = second;
 
     second->data = 20;
     second->next = third;
 
-    third->data = 30;
+    third->data = 50;
     third->next = fourth;
 
-    fourth->data = 40;
+    fourth->data = 70;
     fourth->next = NULL;
+    Print();
 
+    Delete(1);
     Print();
     return 0;
 }
@@ -43,4 +47,21 @@ void Print(){
         cout<<temp->data<<" ";
         temp = temp->next;
     }
+    cout<<endl;
+}
+
+void Delete(int n){
+    Node* temp = head;
+
+    if(n==1){
+        head = temp->next;
+        delete temp;
+        return;
+    }
+    for(int i=0;i<n-2;i++){
+        temp = temp->next;
+    }
+    Node* temp2 = temp->next;
+    temp->next = temp2->next;
+    delete temp2;
 }
