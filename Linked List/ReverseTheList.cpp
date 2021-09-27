@@ -1,5 +1,5 @@
 #include<iostream>
-
+#include<iomanip>
 using namespace std;
 
 class Node{
@@ -62,9 +62,17 @@ void Reverse(){
 
 void Print(){
     Node* temp = head;
+    cout<<"Address is: ";
+
+    while(temp!= NULL){
+        cout<<setw(8)<<temp<<" ";
+        temp = temp->next;
+    }
+    temp = head;
+    cout<<endl;
     cout<<"List is: ";
     while(temp!= NULL){
-        cout<<temp->data<<" ";
+        cout<<setw(8)<<temp->data<<" ";
         temp = temp->next;
     }
     cout<<endl;
