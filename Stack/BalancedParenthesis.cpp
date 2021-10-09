@@ -13,7 +13,6 @@ int main(){
     else{
         cout<<"Not balanced";
     }
-
     return 0;
 }
 
