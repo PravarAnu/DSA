@@ -6,7 +6,7 @@ bool checkParenthesis(string s);
 
 int main(){
     string s;
-    s = "])";
+    s = "][";
     if(checkParenthesis(s)){
         cout<<"Balanced Parenthesis";
     }
@@ -20,6 +20,7 @@ int main(){
 bool checkParenthesis(string s){
     stack<char> st;
     for(int i=0; i<s.length(); i++){
+        
         if(s[i]=='(' || s[i]=='{' || s[i]=='['){
             st.push(s[i]);
             continue;
@@ -54,8 +55,7 @@ bool checkParenthesis(string s){
                     }
                     break;
             }
-        }
+        }   
     }
-
     return st.empty();
 }
