@@ -6,7 +6,7 @@ bool checkParenthesis(string s);
 
 int main(){
     string s;
-    s = "][";
+    cin>>s;
     if(checkParenthesis(s)){
         cout<<"Balanced Parenthesis";
     }
@@ -22,39 +22,40 @@ bool checkParenthesis(string s){
         
         if(s[i]=='(' || s[i]=='{' || s[i]=='['){
             st.push(s[i]);
-            continue;
         }
-        else if(st.empty()){
-            return false;
-        }
-        else{
-            switch(s[i]){
-                case ')':
-                    if(st.top() == '('){
-                        st.pop();
-                    }
-                    else{
-                        return false;
-                    }
-                    break;
-                case '}':
-                    if(st.top() == '{'){
-                        st.pop();
-                    }
-                    else{
-                        return false;
-                    }
-                    break;
-                case ']':
-                    if(st.top() == '['){
-                        st.pop();
-                    }
-                    else{
-                        return false;
-                    }
-                    break;
+        else if(s[i]==')' || s[i]=='}' || s[i]==']'){
+                if(st.empty()){
+                    return false;
+                }
+                else{
+                switch(s[i]){
+                    case ')':
+                        if(st.top() == '('){
+                            st.pop();
+                        }
+                        else{
+                            return false;
+                        }
+                        break;
+                    case '}':
+                        if(st.top() == '{'){
+                            st.pop();
+                        }
+                        else{
+                            return false;
+                        }
+                        break;
+                    case ']':
+                        if(st.top() == '['){
+                            st.pop();
+                        }
+                        else{
+                            return false;
+                        }
+                        break;
+                }
             }
-        }   
+        } 
     }
     return st.empty();
 }
