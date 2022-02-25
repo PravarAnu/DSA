@@ -17,6 +17,10 @@ BtNode *newNode(char data){
     return temp;
 }
 
+void Inorder(BtNode *root);
+void Preorder(BtNode *root);
+void Postorder(BtNode *root);
+
 int main() {
 
     BtNode *root = NULL;
@@ -48,5 +52,46 @@ int main() {
 
     seventh->right = tenth;
 
+    Inorder(root);
+    cout<<endl;
+    Preorder(root);
+    cout<<endl;
+    Postorder(root);
+
     return 0;
+}
+
+
+
+
+void Inorder(BtNode *root){
+    if(root == NULL){
+        return;
+    }
+
+    Inorder(root->left);
+    cout<<root->data<<" ";
+    Inorder(root->right);
+}
+
+
+void Preorder(BtNode *root){
+    if(root == NULL){
+        return;
+    }
+
+    cout<<root->data<<" ";
+    Preorder(root->left);
+    Preorder(root->right);
+}
+
+
+void Postorder(BtNode *root){
+    if(root == NULL){
+        return;
+    }
+
+    Postorder(root->left);
+    Postorder(root->right);
+    cout<<root->data<<" ";
 }
