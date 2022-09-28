@@ -17,12 +17,11 @@ int main(){
 }
 
 void mergeSort(int a[], int low, int high){
-    int mid;
-    if(low == high){
+    if(low >= high){
         return ; 
     }
     else{
-        mid = (low + high)/2;
+        int mid = (low + high)/2;
         mergeSort(a,low,mid);
         mergeSort(a,mid+1,high);
         merge(a,low,mid,high);
