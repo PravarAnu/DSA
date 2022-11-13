@@ -3,13 +3,15 @@
 
 using namespace std;
 
-struct BtNode{
+struct BtNode
+{
     char data;
     BtNode *left;
     BtNode *right;
 };
 
-BtNode *newNode(char data){
+BtNode *newNode(char data)
+{
     BtNode *temp = new BtNode;
     temp->data = data;
     temp->left = NULL;
@@ -20,7 +22,8 @@ BtNode *newNode(char data){
 
 void levelOrder(BtNode *root);
 
-int main() {
+int main()
+{
 
     BtNode *root = NULL;
 
@@ -53,30 +56,76 @@ int main() {
 
     levelOrder(root);
 
-return 0;
+    return 0;
 }
 
-
-void levelOrder(BtNode *root){
-    if(root == NULL){
+void levelOrder(BtNode *root)
+{
+    if (root == NULL)
+    {
         return;
     }
     queue<BtNode *> q;
 
     q.push(root);
 
-    while(!q.empty()){
+    while (!q.empty())
+    {
         BtNode *temp = q.front();
 
-        if(temp->left!=NULL){
+        if (temp->left != NULL)
+        {
             q.push(temp->left);
         }
 
-        if(temp->right!= NULL){
+        if (temp->right != NULL)
+        {
             q.push(temp->right);
         }
 
-        cout<<temp->data<<" ";
+        cout << temp->data << " ";
         q.pop();
     }
+}
+
+// Levelorder traversal and storing the values by levelorder way.
+
+vector<vector<int>> levelOrder(TreeNode *root){
+    vector<vector<int>> output;
+
+    queue<TreeNode *> q;
+    q.push(root);
+    q.push(NULL);
+
+    vector<int> v;
+    while (!q.empty())
+    {
+        TreeNode *front = q.front();
+        q.pop();
+
+        if (front != NULL)
+        {
+            v.push_back(front->val);
+            if (front->left != NULL)
+            {
+                q.push(front->left);
+            }
+
+            if (front->right != NULL)
+            {
+                q.push(front->right);
+            }
+        }
+        else
+        {
+            if (!q.empty())
+            {
+                q.push(NULL);
+            }
+            output.push_back(v);
+            v.clear();
+        }
+    }
+
+    return output;
 }

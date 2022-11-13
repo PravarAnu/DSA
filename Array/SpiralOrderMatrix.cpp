@@ -2,10 +2,11 @@
 using namespace std;
 
 int main(){
-    int a[3][3]={
-        { 1, 2, 3},
-        { 8, 9, 4},
-        { 7, 6, 5}
+    int a[4][3]={
+        {  1,  2,  3},
+        { 10, 11,  4},
+        {  9, 12,  5},
+        {  8,  7,  6}
     };
     int n = sizeof(a)/sizeof(a[0]);
     int m = sizeof(a)/sizeof(a[0][0]) / n;
