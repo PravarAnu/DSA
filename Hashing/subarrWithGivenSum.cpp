@@ -21,9 +21,7 @@ string subArrayWithGivenSumFast(vector<int> &arr, int sum){
     unordered_set<int> u;
     int total = 0;
     for (auto i : arr){
-        // if(i == sum){
-        //     return "Found";
-        // }
+        
         total += i;
         if(total == sum){
             return "Found";
