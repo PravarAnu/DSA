@@ -1,5 +1,10 @@
 {
     "files.exclude": {
         "**/.exe": true
+    },
+    "files.associations": {
+        "*.ejs": "html",
+        "iostream": "cpp",
+        "ostream": "cpp"
     }
 }

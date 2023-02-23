@@ -5,6 +5,16 @@ struct Node{
     int data;
     Node *left;
     Node *right;
+    
+    Node(){
+
+    }
+
+    Node(int data){
+        this->data = data;
+        left = NULL;
+        right = NULL;
+    }
 };
 
 void inorder(Node *root){
@@ -32,6 +42,47 @@ Node *insert(Node *root, int newData){
         root->right = insert(root->right, newData);
     }
 
+    return root;
+}
+
+Node *iterativeInsertion(Node *root, int newData){
+/* 
+    curr, prev
+*/
+    if(root == NULL){
+        root = new Node(newData);
+    }
+    else{
+
+        Node *temp = new Node();
+        temp->data = newData;
+        temp->left,temp->right = NULL;
+
+        Node *curr = root;
+        Node *prev = NULL;
+
+        while(curr!=NULL){
+            if(curr->data == newData){
+                return root;
+            }
+            else if(curr->data > newData){
+                prev = curr;
+                curr = curr->left;
+            }
+            else{
+                prev = curr;
+                curr = curr->right;
+            }
+        }
+
+        if(prev->data > newData){
+            prev->left = temp;
+        }
+        else{
+            prev->right = temp;
+        }
+    }
+    
     return root;
 }
 

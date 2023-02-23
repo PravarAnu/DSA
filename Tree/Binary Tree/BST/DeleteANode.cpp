@@ -1,13 +1,13 @@
 #include <iostream>
 using namespace std;
 
-struct Node{
+struct Node {
     int data;
     Node *left;
     Node *right;
 };
 
-Node * newNode(int data){
+Node *newNode(int data) {
     Node *temp = new Node();
     temp->data = data;
     temp->left = NULL;
@@ -16,49 +16,43 @@ Node * newNode(int data){
     return temp;
 }
 
-void inorder(Node *root){
-    if(root == NULL){
+void inorder(Node *root) {
+    if (root == NULL) {
         return;
     }
     inorder(root->left);
-    cout<<root->data<<" ";
+    cout << root->data << " ";
     inorder(root->right);
 }
 
-Node *findMin(Node *root){
-    while(root->left != NULL){
+Node *findMin(Node *root) {
+    while (root->left != NULL) {
         root = root->left;
     }
     return root;
 }
 
-Node * Delete(Node *root, int data){
-    if(root == NULL){
+Node *Delete(Node *root, int data) {
+    if (root == NULL) {
         return root;
-    }
-    else if(data < root->data){
+    } else if (data < root->data) {
         root->left = Delete(root->left, data);
-    }
-    else if(data > root->data){
+    } else if (data > root->data) {
         root->right = Delete(root->right, data);
-    }
-    else{
-        if(root->left == NULL && root->right == NULL){
+    } else {
+        if (root->left == NULL && root->right == NULL) {
             delete root;
             root = NULL;
-        }
-        else if(root->left == NULL){
-            Node * temp = root;
+        } else if (root->left == NULL) {
+            Node *temp = root;
             root = root->right;
             delete temp;
-        }
-        else if(root->right == NULL){
+        } else if (root->right == NULL) {
             Node *temp = root;
             root = root->left;
             delete temp;
-        }
-        else{
-            Node * temp = findMin(root->right);
+        } else {
+            Node *temp = findMin(root->right);
             root->data = temp->data;
             root->right = Delete(root->right, temp->data);
         }
@@ -103,12 +97,12 @@ int main() {
     seventh->right = twelveth;
 
     inorder(root);
-    cout<<endl;
+    cout << endl;
 
     root = Delete(root, 28);
 
     inorder(root);
-    cout<<endl;
+    cout << endl;
 
     return 0;
 }
