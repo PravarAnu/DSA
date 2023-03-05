@@ -2,12 +2,12 @@
 #include <vector>
 using namespace std;
 
-int buyAndSellStocks(vector<int> stocksPrice){
+int buyAndSellStocks(vector<int> stocksPrice) {
     int totalProfit = 0;
 
-    for(int i=1; i<stocksPrice.size(); i++){
-        if(stocksPrice[i] > stocksPrice[i-1]){
-            totalProfit += (stocksPrice[i]-stocksPrice[i-1]);
+    for (int i = 1; i < stocksPrice.size(); i++) {
+        if (stocksPrice[i] > stocksPrice[i - 1]) {
+            totalProfit += (stocksPrice[i] - stocksPrice[i - 1]);
         }
     }
 
@@ -16,9 +16,9 @@ int buyAndSellStocks(vector<int> stocksPrice){
 
 int main() {
 
-    vector<int> stocksPrice = {7,6,4,3,1};
+    vector<int> stocksPrice = {7, 6, 4, 3, 1};
 
-    cout<<buyAndSellStocks(stocksPrice);
+    cout << buyAndSellStocks(stocksPrice);
 
     return 0;
 }

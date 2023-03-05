@@ -27,7 +27,6 @@ int trappingRainWaterNaive(vector<int> blocks) {
 int trappingRainWaterEfficient(vector<int> blocks) {
     int totalWaterTrapped = 0;
 
-
     vector<int> maxLeft(blocks.size());
     maxLeft[0] = blocks[0];
 
@@ -37,9 +36,9 @@ int trappingRainWaterEfficient(vector<int> blocks) {
 
     vector<int> maxRight(blocks.size());
 
-    maxRight[maxRight.size()-1] = blocks[blocks.size()-1];
+    maxRight[maxRight.size() - 1] = blocks[blocks.size() - 1];
 
-    for (int i = maxRight.size()-2; i >= 0; i--) {
+    for (int i = maxRight.size() - 2; i >= 0; i--) {
         maxRight[i] = max(blocks[i], maxRight[i + 1]);
     }
 
@@ -54,10 +53,9 @@ int main() {
 
     vector<int> blocks = {0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1};
 
-    cout << trappingRainWaterNaive(blocks)<<endl;
-    
-    cout << trappingRainWaterEfficient(blocks)<<endl;
+    cout << trappingRainWaterNaive(blocks) << endl;
 
+    cout << trappingRainWaterEfficient(blocks) << endl;
 
     return 0;
 }
