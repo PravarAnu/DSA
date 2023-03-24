@@ -6,14 +6,31 @@
 using namespace std;
 
 int kadane(int arr[], int size);
+int maxSubSum(int a[], int size);
 
 int main() {
 
     int a[] = {-2, 3, 4, -5, 6};
     int size = sizeof(a) / sizeof(a[0]);
-    cout << kadane(a, size);
+    cout << kadane(a, size)<<endl;
+
+    cout<<maxSubSum(a, size)<<endl;
 
     return 0;
+}
+
+int maxSubSum(int a[], int size){
+    int maxSum = a[0];
+
+    int maxValue = a[0];
+    for(int i=1; i<size; i++){
+        maxValue = max(a[i], (a[i] + maxValue));
+
+        maxSum = max(maxSum, maxValue);
+    }
+
+
+    return maxSum;
 }
 
 int kadane(int arr[], int size) {
