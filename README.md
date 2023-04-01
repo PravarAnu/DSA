@@ -82,7 +82,18 @@
 
 
 ## Tree
-*Tree is an non-linear data structure which is also a multilevel data structure with a hierarchical relationship among its nodes. The bottom most node in the hierarchy is known as leaf node and the topmost is known as root node.                                                     It is based on parent-child relationship among the nodes. Each node in the tree can have more than one children except the leaf node.*
+*Tree is an non-linear data structure which is also a multilevel data structure with a hierarchical relationship among its nodes. The bottom most node in the hierarchy is known as leaf node and the topmost is known as root node. It is based on parent-child relationship among the nodes. Each node in the tree can have more than one children except the leaf node.*
+
+### Advantages:
+
+### Disadvanteges:
+
+### Real Life Examples:
+
+
+
+## Trie
+*Tree is an non-linear data structure which is also a multilevel data structure with a hierarchical relationship among its nodes. The bottom most node in the hierarchy is known as leaf node and the topmost is known as root node. It is based on parent-child relationship among the nodes. Each node in the tree can have more than one children except the leaf node.*
 
 ### Advantages:
 
