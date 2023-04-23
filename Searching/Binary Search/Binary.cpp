@@ -25,9 +25,11 @@
                 return -1
 
         Time Complexity:
-                Worst-case performance	O(log size)
+                Worst-case performance	O(log n)
                 Best-case performance	O(1)
-                Average performance		O(log size)
+                Average performance		O(log n)
+
+        Space Complexity   O(1)
 */
 
 #include <iostream>
