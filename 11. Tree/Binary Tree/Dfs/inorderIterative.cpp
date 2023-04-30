@@ -1,4 +1,5 @@
 #include <iostream>
+#include <stack>
 
 using namespace std;
 
@@ -7,6 +8,27 @@ struct BtNode{
     BtNode *left;
     BtNode *right;
 };
+
+void InorderIterative(BtNode *root){
+    stack<BtNode *> s;
+
+    BtNode *curr = root;
+
+    while(curr!=NULL || !s.empty()){
+
+        while(curr!=NULL){
+            s.push(curr);
+            curr = curr->left;
+        }
+
+        curr = s.top();
+        s.pop();
+
+        cout<<curr->data<<" ";
+        curr = curr->right;
+    }
+}
+
 
 BtNode *newNode(char data){
     BtNode *temp = new BtNode;
@@ -17,9 +39,6 @@ BtNode *newNode(char data){
     return temp;
 }
 
-void Inorder(BtNode *root);
-void Preorder(BtNode *root);
-void Postorder(BtNode *root);
 
 int main() {
 
@@ -52,11 +71,7 @@ int main() {
 
     seventh->right = tenth;
 
-    Inorder(root);
-    cout<<endl;
-    Preorder(root);
-    cout<<endl;
-    Postorder(root);
+    InorderIterative(root);
 
     return 0;
 }
@@ -64,34 +79,3 @@ int main() {
 
 
 
-void Inorder(BtNode *root){
-    if(root == NULL){
-        return;
-    }
-
-    Inorder(root->left);
-    cout<<root->data<<" ";
-    Inorder(root->right);
-}
-
-
-void Preorder(BtNode *root){
-    if(root == NULL){
-        return;
-    }
-
-    cout<<root->data<<" ";
-    Preorder(root->left);
-    Preorder(root->right);
-}
-
-
-void Postorder(BtNode *root){
-    if(root == NULL){
-        return;
-    }
-
-    Postorder(root->left);
-    Postorder(root->right);
-    cout<<root->data<<" ";
-}

@@ -18,11 +18,17 @@ void compressedString(string s, int n){
         }
     }
 
+    if(s[s.size()-1] == s[s.size()-2]){
+        cout<<s[s.size()-1]<<count;
+    }else{
+        cout<<s[s.size()-1]<<1;
+    }
+
 }
 
 int main() {
 
-    string s = "aaaabbbccab";
+    string s = "aaaabbbccb";
     // cin>>s;
     int n = 1;
     // cin>>n;
