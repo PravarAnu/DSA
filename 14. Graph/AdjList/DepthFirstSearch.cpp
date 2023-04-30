@@ -48,11 +48,22 @@ int main() {
     g->add(2,3,0);
     g->add(3,4,0);
     g->add(4,0,0);
+    g->add(5,6,0);
+    g->add(6,7,0);
+    g->add(5,7,0);
+    g->add(7,8,0);
+
 
     g->print();
 
     map<int, bool> visited;
-    g->dfs(0,visited);
+    
+    for(int i=1; i<=8; i++){
+        if(!visited[i]){
+            g->dfs(i,visited);
+            cout<<endl;
+        }
+    }
 
     return 0;
 }
